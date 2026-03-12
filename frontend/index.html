@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packing Checklist</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 10px 0; }
+        input[type="checkbox"] { margin-right: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Travel Packing Checklist</h1>
+    <h2>Essentials</h2>
+    <ul>
+        <li><input type="checkbox"> Passport</li>
+        <li><input type="checkbox"> Wallet (Cash and Cards)</li>
+        <li><input type="checkbox"> Phone and Charger</li>
+        <li><input type="checkbox"> Travel Insurance</li>
+    </ul>
+    <h2>Clothing</h2>
+    <ul>
+        <li><input type="checkbox"> T-Shirts</li>
+        <li><input type="checkbox"> Pants/Shorts</li>
+        <li><input type="checkbox"> Underwear</li>
+        <li><input type="checkbox"> Socks</li>
+        <li><input type="checkbox"> Jacket</li>
+    </ul>
+    <h2>Toiletries</h2>
+    <ul>
+        <li><input type="checkbox"> Toothbrush and Toothpaste</li>
+        <li><input type="checkbox"> Shampoo and Conditioner</li>
+        <li><input type="checkbox"> Deodorant</li>
+        <li><input type="checkbox"> Sunscreen</li>
+        <li><input type="checkbox"> Makeup (if needed)</li>
+    </ul>
+    <h2>Other</h2>
+    <ul>
+        <li><input type="checkbox"> Medications</li>
+        <li><input type="checkbox"> Snacks</li>
+        <li><input type="checkbox"> Camera</li>
+        <li><input type="checkbox"> Travel Guides/Maps</li>
+    </ul>
+    <script>
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                this.parentElement.style.textDecoration = this.checked ? 'line-through' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
